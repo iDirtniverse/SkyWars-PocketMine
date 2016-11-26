@@ -342,7 +342,7 @@ final class SWarena
             return;
         }
         if ($this->GAME_STATE > 0 && $this->time >= $this->maxtime) {
-            $this->stop();
+            $this->player->teleport($this->player->getLevelByName($this->world)->getSafeSpawn());
             return;
         }
 
