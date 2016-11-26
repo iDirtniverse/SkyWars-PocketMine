@@ -18,20 +18,6 @@ CONFIG_VERSION: 0.6dev
 
 ###########################################_GAME_###########################################
 
-# Players playing a SkyWars game won't be able to run these commands.
-# You can add or delete commands but make sure to respect syntax.
-banned.commands.while.in.game:
-- /hub
-- /lobby
-- /spawn
-- /tpa
-- /tp
-- /tpaccept
-- /back
-- /home
-- /f
-- /kill
-
 # If this option is "true" , the game will start once all the slots will be finished , regardless from countdown.
 start.when.full: true
 
@@ -71,15 +57,9 @@ join.health: 99
 # 15 = CAUSE_STARVATION
 # 16 = CAUSE_LIGHTNING
 damage.cancelled.causes:
-- 0
-- 3
-- 4
-- 8
-- 12
-- 15
 
 # Players playing a SkyWars game won't drop anything on death if this option = "false".
-drops.on.death: false
+drops.on.death: true
 
 # Players playing a SkyWars game won't be able to drop items if this option = "false".
 player.drop.item: true
@@ -94,12 +74,12 @@ chest.refill.rate: 240
 
 # After the game start, players won't be able to PvP for N seconds (default 20).
 # N.B : To disable this just put 0 seconds.
-no.pvp.countdown: 20
+no.pvp.countdown: 30
 
 # Spectator gamemode for killed players.
 # N.B : Players will be able to fly far away.
 # N.B : So , I recommend you to set "world.generator.air" to true.
-death.spectator: true
+death.spectator: false
 
 # The spectator will be able to select this item to quit from the SW game.
 # N.B : Respect syntax " id:meta "
@@ -108,10 +88,10 @@ spectator.quit.item: '120:0'
 # ------------------------------------------REWARDS------------------------------------------
 # Award winning players' switch.
 # N.B : You need a supported economy plugin for this to work.
-reward.winning.players: false
+reward.winning.players: true
 
 # How many money-coins should this player win?
-reward.value: 100
+reward.value: 50
 
 # If you want you can write a command here , it will be executed when a player wins.
 # N.B : You can use {PLAYER} as the player name. EXAMPLE: '/tell {PLAYER} You won!'
@@ -123,7 +103,7 @@ reward.command: '/'
 ########################################_JOIN-SIGNS_########################################
 
 # Signs format.
-1st_line: §l§c[§bSW§c]
+1st_line: §l§c[§bSG§c]
 2nd_line: §l§e{SWNAME}
 
 # Refreshes signs each 5 seconds.
@@ -151,11 +131,11 @@ knockBack.follow.sign.direction: false
 
 always.spawn.in.defaultLevel: true
 
-clear.inventory.on.respawn&join: false
+clear.inventory.on.respawn&join: true
 
 clear.inventory.on.arena.join: true
 
-clear.effects.on.respawn&join: false
+clear.effects.on.respawn&join: true
 
 clear.effects.on.arena.join: true
 
