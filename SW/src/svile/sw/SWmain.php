@@ -225,7 +225,7 @@ class SWmain extends PluginBase
             'death.void' => '@c>@f{PLAYER} @cwas killed by @fVOID @b{COUNT}',
             'death.lava' => '@c>@f{PLAYER} @cwas killed by @fLAVA @b{COUNT}',//TODO: add more?
             'death.spectator' => '@f>@bYou are now a spectator!_EOL_@f>@bType @f/sw quit @bto exit from the game',
-            'server.broadcast.winner' => '@0>@f{PLAYER} @bwon the game on SW: @f{SWNAME}',
+            'server.broadcast.winner' => '@0>@f{PLAYER} @bwon the game on SG: @f{SWNAME}',
             'winner.reward.msg' => '@bYou won @f{VALUE}$_EOL_@7Your money: @f{MONEY}$'
         ]);
         touch($this->getDataFolder() . 'SW_lang.yml');
