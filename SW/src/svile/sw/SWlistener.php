@@ -593,20 +593,4 @@ class SWlistener implements Listener
             }
         }
     }
-
-
-    public function onCommand(PlayerCommandPreprocessEvent $ev)
-    {
-        $command = strtolower($ev->getMessage());
-        if ($command{0} == '/') {
-            $command = explode(' ', $command)[0];
-            if ($this->pg->inArena($ev->getPlayer()->getName())) {
-                if (in_array($command, $this->pg->configs['banned.commands.while.in.game'])) {
-                    $ev->getPlayer()->sendMessage($this->pg->lang['banned.command.msg']);
-                    $ev->setCancelled();
-                }
-            }
-        }
-        unset($command);
-    }
 }
