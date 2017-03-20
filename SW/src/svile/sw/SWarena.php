@@ -378,6 +378,10 @@ final class SWarena
                     $p->getLevel()->addSound((new \pocketmine\level\sound\ButtonClickSound($p)), [$p]);
             }
         }
+        if ($this->GAME_STATE == 1 && > count($this->players)) {
+           foreach ($this->pg->getServer()->getLevelByName($this->world)->getPlayers() as $p)
+                $p->sendPopup(TextFormat::GREEN . 'Game>>' . TextFormat::GRAY . $a->getSlot(true) . TextFormat::GOLD . 'Tributes Remaining!');                                                                     
+        }
     }
 
 
