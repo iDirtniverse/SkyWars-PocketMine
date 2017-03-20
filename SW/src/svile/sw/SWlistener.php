@@ -431,6 +431,7 @@ class SWlistener implements Listener
 
                     foreach ($this->pg->getServer()->getLevelByName($a->getWorld())->getPlayers() as $pl)
                         $pl->sendMessage($message);
+                        $pl->sendPopup($message);
 
                     if (!$this->pg->configs['drops.on.death'])
                         $event->setDrops([]);
