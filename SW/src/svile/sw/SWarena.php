@@ -380,7 +380,7 @@ final class SWarena
         }
         if ($this->GAME_STATE == 1 && > count($this->players)) {
            foreach ($this->pg->getServer()->getLevelByName($this->world)->getPlayers() as $p)
-                $p->sendPopup(TextFormat::GREEN . 'Game>>' . TextFormat::GRAY . $a->getSlot(true) . TextFormat::GOLD . 'Tributes Remaining!');                                                                     
+                $p->sendPopup(TextFormat::GREEN . 'Game>>' . TextFormat::GRAY . $players . TextFormat::GOLD . 'Tributes Remaining!');                                                                     
         }
     }
 
